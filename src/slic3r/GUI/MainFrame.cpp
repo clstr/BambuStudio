@@ -983,6 +983,8 @@ void MainFrame::update_title()
 
 void MainFrame::show_calibration_button(bool show)
 {
+    // always show calibration menu regardless of printer type.
+    show = true;
 #ifdef __APPLE__
     bool shown = m_menubar->FindMenu(_L("Calibration")) != wxNOT_FOUND;
     if (shown == show)
